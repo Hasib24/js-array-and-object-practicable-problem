@@ -24,7 +24,6 @@ let data1 = {
 
 // console.log(study[1].secondary[0].school_name);
 
-
 // Problem 2 solved
 let data = [
   {
@@ -60,7 +59,37 @@ let data = [
 
 let { pHeroCourses, locationField } = data[data.length - 1];
 let { lat, lon } = locationField["en-US"];
-// // worked 
+// // worked
 // console.log(pHeroCourses["course-xyz"]);
 // console.log(lon);
-https://github.com/Hasib24/js-array-and-object-practicable-problem.git
+
+// Problem 3 solved
+let activities = {
+  activity1: [
+    {
+      name: "listen on spotify",
+      song_list: {
+        song_1: "abc",
+        song_2: "bcd",
+      },
+      id: 1,
+    },
+    {
+      name: "listen music through bot",
+      song_list: {
+        song_1: "wxy",
+        song_2: "xyz",
+      },
+      id: 2,
+    },
+  ],
+};
+
+let { activity1 } = activities;
+
+let songlist = activity1.map((arr) => {
+  const { name, song_list, id } = arr;
+  return song_list;
+});
+// console.log(songlist[0].song_1);
+// console.log(songlist[1].song_2);
